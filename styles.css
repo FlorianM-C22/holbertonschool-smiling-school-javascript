@@ -2,8 +2,8 @@
   --main-color: #c271ff;
   --opacity-value: 0.9;
   --background-color: #071629;
-  --font-family-1: "Source Sans Pro", sans-serif;
-  --font-family-2: "Spin Cycle OT", sans-serif;
+  --font-family-1: 'Source Sans Pro', sans-serif;
+  --font-family-2: 'Spin Cycle OT', sans-serif;
   --font-family-3: Coiny, sans-serif;
   --color-white: #ffffff;
   --nav-line-height: 2px;
@@ -43,7 +43,7 @@
 /* Header / Hero Styles */
 
 .header {
-  background-image: url("images/pic_1.jpg");
+  background-image: url('images/pic_1.jpg');
   background-color: var(--background-color);
   max-width: 100%;
   height: auto;
@@ -81,7 +81,7 @@
 }
 
 .header .nav-link:after {
-  content: "";
+  content: '';
   display: block;
   background-color: var(--color-white);
   width: 0;
@@ -203,7 +203,7 @@
   padding-left: 53px;
 }
 
-.quotes .row [class*="col"] {
+.quotes .row [class*='col'] {
   padding-left: 0;
   padding-right: 0;
 }
@@ -872,7 +872,7 @@
   margin-bottom: 37px;
 }
 
-.row [class*="col-"] {
+.row [class*='col-'] {
   padding-top: 18px;
   padding-bottom: 18px;
 }
@@ -899,4 +899,65 @@
   .results .card {
     width: 90vw;
   }
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #c271ff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+[id^='carousel'] .slick-slide img {
+  display: inline !important;
+}
+
+[id^='carousel'] .slick-prev,
+[id^='carousel'] .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+
+  transition: opacity 0.15s ease;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: 0;
+  z-index: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+[id^='carousel'] .slick-prev img,
+[id^='carousel'] .slick-next img {
+  height: auto;
+  opacity: 0.5;
+  width: 30px;
+}
+
+.slick-slide {
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+}
+
+[id^='carousel'] .card {
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  margin-left: auto;
+  margin-right: auto;
 }
